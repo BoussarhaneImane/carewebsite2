@@ -1,0 +1,11 @@
+/* Custom styles for Swiper pagination */
+.custom-swiper-pagination .swiper-pagination-bullet {
+     background-color: #e18a1f; /* amber color */
+     opacity: 1;
+     transition: background-color 0.3s;
+   }
+   
+   .custom-swiper-pagination .swiper-pagination-bullet-active {
+     background-color: #1b6b1b; /* green color */
+   }
+   
