@@ -6,29 +6,31 @@
    }
    
    .card-custom {
-     border: 1px solid #8B4513; /* SaddleBrown */
-     background-color: #F5F5DC; /* Beige */
+     border: 1px solid #310f70; 
+     background-color: white; 
    }
    
    .card-title-custom {
-     color: #115b31; /* SeaGreen */
+    color:rgb(151, 18, 71);
      font-size: 0.8rem;
    }
    
    .card-text-custom {
-     color: #556B2F; /* DarkOliveGreen */
+     color: rgb(151, 18, 71);
      font-size: 0.8rem;
    }
    
    .button-custom {
-
-     border-color: #8B4513; /* SaddleBrown */
+    background-color: rgb(252, 252, 252);
+    color:  rgb(5, 5, 59);
+    border-color: rgb(151, 18, 71);
      font-size: 0.8rem;
      border-radius: 10rem;
    }
    
    .button-custom:hover {
-     background-color: #A0522D; /* Sienna */
-     border-color: #A0522D; /* Sienna */
+     background-color: rgb(5, 5, 59);
+       color:   rgb(252, 252, 252);
+       border-color: rgb(151, 18, 71);
    }
    

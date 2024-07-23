@@ -1,0 +1,28 @@
+
+  #box1::before,
+  #box1::after {
+     content: '';
+     position: absolute;
+     width: 120rem;
+     height: 38rem;
+     
+     left: 0;
+     margin-top: 0rem;
+  
+     animation: animate 4s linear infinite;
+   }
+   
+  #box1 ::after {
+     animation-delay: -3s;
+   }
+   
+   @keyframes animate {
+     0% {
+       transform: translateX(-100%);
+     }
+     100% {
+       transform: translateX(100%);
+     }
+   }
+  
+   

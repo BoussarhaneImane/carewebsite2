@@ -79,7 +79,7 @@ const Products = () => {
     <div>
       <div className="container">
         {/* Header section */}
-        <Heading  title="Popular Products " subtitle={"Explore Our Products"} />
+        <Heading  title="Nos Produits"  subtitle={"Suivi des produits"} />
         {/* Body section */}
         <ProductCard data={ProductsData} />
         <ProductCard data={ProductsData2} />

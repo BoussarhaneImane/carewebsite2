@@ -39,7 +39,7 @@ const Store = () => {
           <Card.Body>
             <Card.Title className="card-title-custom">{product.name}</Card.Title>
             <Card.Text className="card-text-custom">${product.price}</Card.Text>
-            <Button variant="primary" className="button-custom bg-amber-700" onClick={() => addToCart(product)}>Add to Cart</Button>
+            <Button variant="primary" className="button-custom " onClick={() => addToCart(product)}>Add to Cart</Button>
           </Card.Body>
         </Card>
       ))}

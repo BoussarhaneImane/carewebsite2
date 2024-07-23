@@ -34,7 +34,7 @@ const images = [
 const MySwiperComponent = () => {
   return (
     <div className="container mx-auto py-8 mt-12">
-      <h1 className=" text-green-800 font-medium text-2xl text-center mb-4">OUR BRANDS</h1>
+      <h1 className=" text-pink-800 font-medium text-2xl text-center mb-4">OUR BRANDS</h1>
       <Swiper
         effect="coverflow"
         grabCursor={true}
@@ -60,7 +60,7 @@ const MySwiperComponent = () => {
           <SwiperSlide key={index} className="flex flex-col items-center justify-center w-full h-full">
             <img src={image} alt={`slide_image_${index + 1}`} className="object-contain h-80 mb-4" />
             <Link to={`/shop`}>
-              <button className="px-3 py-1 bg-amber-700 absolute bottom-10 left-1/2 transform -translate-x-1/2 text-white rounded-2xl hover:bg-green-900">
+              <button className="px-3 py-1 bg-pink-900 absolute bottom-10 left-1/2 transform -translate-x-1/2 text-white rounded-2xl hover:bg-indigo-950">
                 Learn More
               </button>
             </Link>

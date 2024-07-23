@@ -34,62 +34,74 @@ const Navbar = ({ handleOrderPopup }) => {
   };
 
   return (
-    <nav className="bg-white shadow-sm">
+    <nav className="bg-indigo-950 shadow-sm" >
       <div className="max-w-7xl mx-auto px-4 sm:px-7 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
-            <Link to="/" className="flex items-center italic text-md text-amber-700">
-              <span className="mr-0 text-green-800 ml-8" id="LOGOT">CareForU</span>
-              <MdEmojiNature className="text-xl text-amber-600 mr-0" size={40} />
+            <Link to="/" className="flex items-center italic text-md ">
+              <span className="mr-0 text-white ml-8" id="LOGOT">CareForU</span>
+              <MdEmojiNature className="text-xl text-pink-900 ml-0 mr-0" size={40} />
             </Link>
           </div>
-          <div className="hidden lg:flex items-center space-x-5">
-            <Link to="/" className="text-green-800" id='nav-link'>Acceuil</Link>
-            <Link to="/catalogue" className="text-green-800" id='nav-link'> Catalogue de produits</Link>
-            <Link to="/shop" className="text-green-800" id='nav-link'>Fiche Produits </Link>
+          <div className="hidden lg:flex items-center space-x-5 mr-48">
+            <Link to="/" className="text-white" id='nav-link'>Acceuil</Link>
+            <Link to="/catalogue" className="text-white" id='nav-link'> Catalogue de produits</Link>
+            <Link to="/shop" className="text-white" id='nav-link'>Fiche Produits </Link>
           
-            <Link to="/compte" className="text-green-800" id='nav-link'>Espace client  </Link>
+            <Link to="/compte" className="text-white" id='nav-link'>Espace client  </Link>
 
             {userName ? (
-              <div className="flex items-center">
+              <div className="flex items-center text-white" >
                 <span className="mr-1">Welcome</span>
-                <FaUser className="mr-1" /> 
-                <span className="text-black">{userName}</span>
-                <Link to="/" onClick={handleLogout} className="text-amber-600" id='nav-link'>Logout</Link>
+                <FaUser className="mr-1 text-pink-900" /> 
+                <span className="text-white">{userName}</span>
+                <Link to="/" onClick={handleLogout} className="text-white  ml-4" id='nav-link'>deconnexion</Link>
               </div>
             ) : (
               <>
-                <Link to="/register" className="text-amber-600 " id='nav-link'>Sign Up</Link>
-                <Link to="/login" className="text-amber-600 " id='nav-link'>Log In</Link>
+                <Link to="/register" className="text-white" id='nav-link' >S'inscrire</Link>
+                <Link to="/login" className="text-white" id='nav-link'>Connexion</Link>
               </>
             )}
             <Button
-              text="CareForU"
-              bgColor="bg-amber-600"
-              textColor="text-white"
+              text="contact"
+              bgColor="bg-white"
+              textColor="text-pink-800"
           
             />
           </div>
-          <div className="flex lg:hidden">
-            <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="text-amber-800">
-              {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
+          <div className="flex lg:hidden ">
+            <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="text-pink-900 p-2">
+              {isMobileMenuOpen ? <FaTimes className='text-white  ' /> : <FaBars />}
             </button>
           </div>
         </div>
         {isMobileMenuOpen && (
-          <div className="lg:hidden">
+          <div className="lg:hidden pb-4">
             <div className="ml-10 flex flex-col space-y-2">
-              <Link to="/" className="text-green-900" id='nav-link'>Acceuil</Link>
-              <Link to="/about" className="text-green-900" id='nav-link'> Catalogue de produits</Link>
-              <Link to="/shop" className="text-green-900" id='nav-link'>Fiche Produits </Link>
-              <Link to="/panier" className="text-green-900" id='nav-link'> Panier </Link>
-              <Link to="/compte" className="text-green-900" id='nav-link'>Espace client  </Link>
-              <Button
-                text="Contact Us"
-                bgColor="bg-orange-600"
-                textColor="text-stone-50"
-                
-              />
+              <Link to="/" className="text-white" id='nav-link'>Acceuil</Link>
+              <Link to="/about" className="text-white" id='nav-link'> Catalogue de produits</Link>
+              <Link to="/shop" className="text-white" id='nav-link'>Fiche Produits </Link>
+            
+              <Link to="/compte" className="text-white" id='nav-link'>Espace client  </Link>
+           
+              {userName ? (
+              <div className="flex items-center text-white" >
+                <span className="mr-1">Welcome</span>
+                <FaUser className="mr-1 text-pink-900" /> 
+                <span className="text-white">{userName}</span>
+             
+                <Link to="/" onClick={handleLogout} className="text-white  ml-4" id='nav-link'>deconnexion</Link>
+              </div>
+            ) : (
+              <>
+                <Link to="/register" className="text-white" id='nav-link' >S'inscrire</Link>
+                <Link to="/login" className="text-white" id='nav-link'>Connexion</Link>
+              </>
+            )}
+         
+        
+         
             </div>
           </div>
         )}

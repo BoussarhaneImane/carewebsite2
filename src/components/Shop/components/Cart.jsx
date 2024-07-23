@@ -23,12 +23,19 @@ const Cart = ({ isOpen, onHide }) => {
                   <h5>{item.name}</h5>
                   <p>${item.price.toFixed(2)}</p>
                   <div className="d-flex align-items-center">
-                    <Button variant="outline-secondary" size="sm" onClick={() => decreaseQuantity(item.id)}>-</Button>
+                    <Button variant="" size="sm" onClick={() => decreaseQuantity(item.id)}>-</Button>
                     <span className="mx-2">{item.quantity}</span>
-                    <Button variant="outline-secondary" size="sm" onClick={() => increaseQuantity(item.id)}>+</Button>
+                    <Button variant="" size="sm" onClick={() => increaseQuantity(item.id)}>+</Button>
                   </div>
                 </div>
-                <Button variant="danger" size="sm" onClick={() => removeFromCart(item.id)} className='rounded-2xl text-xs p-2'>Remove</Button>
+                <Button 
+  variant="" 
+  onClick={() => removeFromCart(item.id)} 
+  className='rounded-2xl text-xs p-2 bg-pink-800 text-white hover:bg-pink-800 focus:bg-pink-800'
+>
+  Remove
+</Button>
+
               </div>
             ))}
             <h5>Total Price: ${totalPrice.toFixed(2)}</h5>
@@ -36,8 +43,8 @@ const Cart = ({ isOpen, onHide }) => {
         )}
       </Modal.Body>
       <Modal.Footer> 
-        <Button variant="" onClick={onHide} className='rounded-3xl bg-amber-500 text-xs'>Close</Button>
-        <Button variant="warning" onClick={() => alert('Proceed to Checkout')} className='rounded-3xl bg-green-700 text-white text-xs'>Checkout</Button>
+        <Button variant="" onClick={onHide} className='rounded-3xl bg-white text-xs'>Close</Button>
+        <Button variant="" onClick={() => alert('Proceed to Checkout')} className='rounded-3xl bg-white text-pink-800 text-xs'>Checkout</Button>
       </Modal.Footer>
     </Modal>
   );

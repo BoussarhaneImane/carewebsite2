@@ -1,58 +1,43 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-import image from '../../assets/imgs/chambre2.jpg';
+import image1 from '../Hero/p1.png';
+import image2 from '../Hero/p2.png';
+import image3 from '../Hero/p3.png';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import './Banner.css';
 
 const Banner = ({ data }) => {
+  useEffect(() => {
+    AOS.init({ duration: 2000 });
+  }, []);
+
   return (
-    <div className="min-h-[560px] flex justify-center items-center py-12 m-0">
+    <div className="min-h-[560px] flex justify-center items-center py-8 bg-white" id="box1">
       <div className="container">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-center text-white rounded-3xl bg-gradient-to-r from-orange-100 to-amber-700">
-          {/* first col */}
-          <div className="p-6 sm:p-8">
-            <p data-aos="slide-right" className="text-lg text-yellow-900 italic">
-              {data.discount}
-            </p>
-            <h1
-              data-aos="zoom-out"
-              className="text-3xl xl:text-4xl font-bold opacity-40 mb-2 text-yellow-900 italic"
-            >
-              {data.title}
-            </h1><br></br>
-            <p data-aos="fade-up" className="text-xs text-yellow-900 italic">
-              {data.date}
-            </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center text-white rounded-3xl">
+          {/* Product Images */}
+          <div className="flex flex-col items-center gap-4">
+            <img src={image1} alt="Product 1" className="w-[180px] h-[180px] object-cover rounded-xl hover:scale-105 filter-animation" data-aos="fade-up"/>
+            <img src={image2} alt="Product 2" className="w-[180px] h-[180px] object-cover rounded-xl hover:scale-108 filter-animation" data-aos="fade-up"/>
+            <img src={image3} alt="Product 3" className="w-[180px] h-[180px] object-cover rounded-xl hover:scale-105 filter-animation" data-aos="fade-up" />
           </div>
-          {/* second col */}
-          <div data-aos="zoom-in" className="h-full flex items-center">
-            <img
-              src={image}
-              alt=""
-              className="scale-125 w-[200px] md:w-[200px] mx-auto object-cover rounded-xl"
-            />
-          </div>
-          {/* third col */}
-          <div className="flex flex-col justify-center gap-4 p-6 sm:p-8">
-            <p data-aos="zoom-out" className="font-semibold text-xl text-orange-200 italic">
-              {data.title2}
+          {/* Advertisement Text */}
+          <div className="flex flex-col items-center md:items-start text-center md:text-left p-6 sm:p-6 text-indigo-950 filter-animation bg-[#f0f0f0]" data-aos="fade-down">
+            <h1 className="text-3xl font-bold mb-4">CareForU</h1>
+            <p className="mb-6 text-sm">
+              Découvrez notre gamme exclusive de produits cosmétiques conçus spécialement pour sublimer votre beauté naturelle. Offrez-vous le meilleur des soins et laissez-vous choyer par nos produits de qualité supérieure. Rejoignez-nous et révélez votre éclat !
             </p>
-            <p data-aos="fade-up" className="text-4xl font-semibold text-orange-200 italic">
-              {data.title3}
-            </p>
-            <p data-aos="fade-up" className="text-xs tracking-wide leading-5 text-orange-200 italic">
-              {data.title4}
-            </p>
-            <div data-aos="fade-up" data-aos-offset="0">
-              <Link to='/shop'>
-                <button className=" bg-gradient-to-r from-orange-100 to-amber-700 py-2 px-4 rounded-full text-amber-800 italic ">
-                  Order Now
-                </button>
-              </Link>
-            </div>
+            <Link to='/shop'>
+              <button className="bg-gradient-to-r from-pink-800 to-indigo-950 py-2 px-4 rounded-full text-white italic hover:bg-pink-900 transition duration-300">
+                Découvrir par là
+              </button>
+            </Link>
           </div>
         </div>
       </div>
     </div>
   );
-};
+}
 
 export default Banner;

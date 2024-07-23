@@ -1,0 +1,53 @@
+.informational-bar {
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+.info span {
+  display: inline-block;
+  margin: 0 10px;
+  font-size: 0.8rem;
+  color: rgb(5, 5, 44);
+}
+
+.info a {
+  color: rgb(5, 5, 44);
+  text-decoration: underline;
+  font-size: 0.8rem;
+}
+.informational-bar::before,
+   .informational-bar::after {
+     content: '';
+     position: absolute;
+     width: 100%;
+     height: 7.5%;
+     top: 0;
+     left: 0;
+    
+     animation: animate 6s linear infinite;
+   }
+   
+   .informational-bar ::after {
+     animation-delay: -3s;
+   }
+   
+   @keyframes animate {
+     0% {
+       transform: translateX(-100%);
+     }
+     100% {
+       transform: translateX(100%);
+     }
+   }
+   
+
+
+
+   @media screen and (min-width: 992px) {
+     .informational-bar {
+       font-size: 1.2rem; /* Adjusted font size for larger screens */
+     }
+   }
+   
+  

@@ -5,29 +5,28 @@ import { GiCrownedHeart, GiCutDiamond } from "react-icons/gi";
 const ServiceData = [
   {
     id: 1,
-    icon: <FaGem className="text-4xl md:text-5xl text-amber-700" />,
-    title: "Quality Products",
-    description: "Handpicked selection of top-tier items",
+    icon: <FaGem className="text-4xl md:text-5xl text-blue-500" />,
+    title: "Produits de Qualité",
+    description: "Sélection soignée d'articles de premier choix",
   },
   {
     id: 2,
     icon: <FaHeart className="text-4xl md:text-5xl text-red-400" />,
-    title: "Customer Care",
-    description: "Dedicated support team available 24/7",
+    title: "Service Client",
+    description: "Équipe de support dédiée disponible 24/7",
   },
   {
     id: 3,
     icon: <FaStar className="text-4xl md:text-5xl text-yellow-400" />,
-    title: "Top Ratings",
-    description: "Highly rated products by satisfied customers",
+    title: "Meilleures Évaluations",
+    description: "Produits très bien notés par des clients satisfaits",
   },
   {
     id: 4,
     icon: <GiCrownedHeart className="text-4xl md:text-5xl text-purple-500" />,
-    title: "Exclusive Offers",
-    description: "Access to special deals and promotions",
+    title: "Offres Exclusives",
+    description: "Accès à des offres spéciales et des promotions",
   },
-
 ];
 
 const Services = () => {

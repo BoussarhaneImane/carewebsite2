@@ -17,7 +17,7 @@ const ProductCard = ({ data }) => {
   <img
     src={data.img}
     alt=""
-    className="h-48 w-48  transition duration-300 ease-in-out rounded-full "
+    className="h-48 w-36  transition duration-300 ease-in-out rounded-full shadow-2xl "
   />
 </div>
 
@@ -30,8 +30,8 @@ const ProductCard = ({ data }) => {
               />
             </div>
             <div className="text-center mt-2">
-              <h2 className="font-serif text-green-950">{data.title}</h2>
-              <h2 className="font-serif text-green-900">{data.price}</h2>
+              <h2 className="font-medium text-pink-900">{data.title}</h2>
+              <h2 className="font-medium text-indigo-950">{data.price}</h2>
             </div>
           </div>
         ))}
