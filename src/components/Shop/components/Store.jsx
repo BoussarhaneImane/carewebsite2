@@ -1,7 +1,8 @@
 import React from 'react';
 import { Button, Card } from 'react-bootstrap';
 import { useShoppingCart } from './ShoppingCartContext';
-import img1 from "./imgs/img1x.jpeg";
+import img1 from './imgs/m1.jpeg';
+
 import img2 from "./imgs/img2.jpeg";
 import img3 from "./imgs/img4.jpeg";
 import img4 from "./imgs/img18.jpeg";
