@@ -9,9 +9,10 @@ const Register = () => {
         email: '',
         password: ''
     });
+   
     const [successMessage, setSuccessMessage] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
-    const [loading, setLoading] = useState(false); // État de chargement
+    const [loading, setLoading] = useState(false);
     const navigate = useNavigate();
 
     const handleChange = (e) => {
@@ -45,6 +46,7 @@ const Register = () => {
             setLoading(false); // Arrêter le chargement
         }
     };
+
 
     return (
         <>
